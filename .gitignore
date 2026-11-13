@@ -1,0 +1,38 @@
+﻿# Secrets and environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+__pycache__/
+*.py[cod]
+
+# Local databases and private documents
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+uploads/
+vault/
+
+# Local backups and editor files
+*.security-backup
+*.pre-public-backup
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python virtual environments
+.venv/
+venv/
+

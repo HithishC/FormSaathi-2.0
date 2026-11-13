@@ -1,0 +1,116 @@
+{
+  "id": "karnataka-post-matric-scholarship",
+  "name": "Karnataka Post-Matric Scholarship",
+  "full_name": "Post-Matric Scholarship for SC/ST/OBC Students - Karnataka",
+  "department": "Social Welfare Department, Government of Karnataka",
+  "portal_url": "https://ssp.karnataka.gov.in",
+  "description": "Financial assistance for SC, ST, and OBC students pursuing post-matric education in Karnataka",
+  "categories_covered": ["SC", "ST", "OBC_CAT1", "OBC_2A", "OBC_2B", "OBC_3A", "OBC_3B"],
+  "eligibility_rules": [
+    {
+      "rule_key": "domicile",
+      "field_name": "domicile_state",
+      "operator": "eq",
+      "value": "Karnataka",
+      "description": "Applicant must be a permanent resident of Karnataka",
+      "is_disqualifying": true
+    },
+    {
+      "rule_key": "category",
+      "field_name": "category",
+      "operator": "in",
+      "value": ["SC", "ST", "OBC_CAT1", "OBC_2A", "OBC_2B", "OBC_3A", "OBC_3B"],
+      "description": "Applicant must belong to SC, ST, or OBC category",
+      "is_disqualifying": true
+    },
+    {
+      "rule_key": "income_sc_st",
+      "field_name": "annual_family_income",
+      "operator": "lte",
+      "value": 250000,
+      "condition_category": ["SC", "ST"],
+      "description": "Annual family income must not exceed ₹2,50,000 for SC/ST categories",
+      "is_disqualifying": true
+    },
+    {
+      "rule_key": "income_obc",
+      "field_name": "annual_family_income",
+      "operator": "lte",
+      "value": 250000,
+      "condition_category": ["OBC_CAT1"],
+      "description": "Annual family income must not exceed ₹2,50,000 for OBC Category-1",
+      "is_disqualifying": true
+    },
+    {
+      "rule_key": "income_obc_other",
+      "field_name": "annual_family_income",
+      "operator": "lte",
+      "value": 100000,
+      "condition_category": ["OBC_2A", "OBC_2B", "OBC_3A", "OBC_3B"],
+      "description": "Annual family income must not exceed ₹1,00,000 for OBC Category 2A/2B/3A/3B",
+      "is_disqualifying": true
+    },
+    {
+      "rule_key": "education",
+      "field_name": "current_education_level",
+      "operator": "in",
+      "value": ["CLASS_11", "CLASS_12", "ITI", "DIPLOMA", "UNDERGRADUATE", "POSTGRADUATE", "PHD"],
+      "description": "Student must be pursuing post-matric education (Class 11 and above)",
+      "is_disqualifying": true
+    },
+    {
+      "rule_key": "institution",
+      "field_name": "institution_name",
+      "operator": "exists",
+      "value": true,
+      "description": "Student must be enrolled in a recognized educational institution",
+      "is_disqualifying": false
+    },
+    {
+      "rule_key": "bank_aadhaar",
+      "field_name": "bank_account_linked",
+      "operator": "eq",
+      "value": true,
+      "description": "Bank account must be Aadhaar-seeded and NPCI-mapped for DBT",
+      "is_disqualifying": false
+    }
+  ],
+  "required_documents": [
+    {"type": "AADHAAR", "name": "Aadhaar Card", "mandatory": true, "digilocker_type": "AADHAAR", "description": "Student's Aadhaar card with name matching exactly"},
+    {"type": "CASTE_CERTIFICATE", "name": "Caste/Community Certificate", "mandatory": true, "digilocker_type": "CASTE", "description": "Valid caste certificate issued by Revenue Department with RD number"},
+    {"type": "INCOME_CERTIFICATE", "name": "Income Certificate", "mandatory": true, "digilocker_type": "INCOME", "description": "Income certificate issued by Revenue Department with valid RD number"},
+    {"type": "SSLC_MARKSHEET", "name": "SSLC Marksheet / SATS Registration", "mandatory": true, "digilocker_type": "SSLC", "description": "SSLC marksheet or SATS registration number for academic verification"},
+    {"type": "PREVIOUS_MARKSHEET", "name": "Previous Year Marksheet", "mandatory": true, "digilocker_type": null, "description": "Mark sheet of the last qualifying examination passed"},
+    {"type": "COLLEGE_ADMISSION", "name": "College Admission / Fee Receipt", "mandatory": true, "digilocker_type": null, "description": "Current institution admission letter, fee receipt, or bonafide certificate"},
+    {"type": "BANK_PASSBOOK", "name": "Bank Passbook / Statement", "mandatory": true, "digilocker_type": null, "description": "Bank passbook showing Aadhaar-linked account details"},
+    {"type": "DISABILITY_CERTIFICATE", "name": "Disability Certificate (UDID)", "mandatory": false, "digilocker_type": "UDID", "description": "Required only for PwD applicants"},
+    {"type": "HOSTEL_PROOF", "name": "Hostel Certificate", "mandatory": false, "digilocker_type": null, "description": "Required only for hostel maintenance allowance claims"}
+  ],
+  "benefits": {
+    "tuition_fee": "Full tuition fee reimbursement",
+    "maintenance_allowance": "Monthly maintenance allowance for day scholars and hostellers",
+    "other": "Book allowance and other incidental charges as applicable"
+  },
+  "application_deadline": "Typically December-January each academic year (check SSP portal for current dates)",
+  "renewal_requirements": [
+    "Must pass the previous year's examination",
+    "Must maintain minimum attendance as per institution norms",
+    "Income certificate must be renewed annually",
+    "Re-verification through SSP portal each academic year"
+  ],
+  "disqualification_conditions": [
+    "Providing false information or forged certificates",
+    "Failing the previous year's examination (renewal applicants)",
+    "Family income exceeding the prescribed limit",
+    "Not being a domicile of Karnataka",
+    "Already receiving another scholarship for the same purpose",
+    "Discontinuing studies without valid reason"
+  ],
+  "official_sources": [
+    {"name": "SSP Karnataka Portal", "url": "https://ssp.karnataka.gov.in"},
+    {"name": "National Scholarship Portal", "url": "https://scholarships.gov.in"},
+    {"name": "Social Welfare Department, Karnataka", "url": "https://sw.karnataka.gov.in"}
+  ],
+  "data_verified": false,
+  "verification_note": "Scheme details compiled from publicly available government sources. Applicants should verify current eligibility criteria and deadlines directly from the official SSP Karnataka portal."
+}
